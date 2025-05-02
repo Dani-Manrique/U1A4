@@ -1,0 +1,32 @@
+Tema de foro: U1A4: Foro de discusión: Bases de datos y sus usuarios U1A4: Foro de discusión: Bases de datos y sus usuarios 
+1. Investiga cinco motores de bases de datos que se encuentran disponibles en el mercado, identificando el sistema de gestión de bases de datos (SGDB) asociado a cada uno de ellos. A continuación, proporciona información técnica sobre cada motor, incluyendo características destacadas.
+ 
+Motor de base de datosSistema de gestión de bases de datos (SGBD)Información técnicaInnoDBMySQLGuarda y organiza datos, permite hacer transacciones seguras, y es rápido.PostgreSQLPostgreSQLPermite guardar datos complejos, hace transacciones seguras, y es muy flexible.Oracle DatabaseOracleMuy seguro, trabaja con muchos datos al mismo tiempo, y es usado por grandes empresas.SQL ServerMicrosoft SQL ServerFácil de usar en Windows, seguro, y trabaja con grandes cantidades de datos.MariaDBMariaDBEs como MySQL, rápido, seguro, y de código abierto. 
+2. Diferencia entre motores de bases de datos de código abierto y motores de uso privativo.
+Código Abierto: Gratuitos, cualquiera puede usarlos y mejorarlos. Ejemplo: MySQL, PostgreSQL, MariaDB.
+Privativos: Se debe pagar por usarlos, son cerrados y solo los dueños pueden modificarlos. Ejemplo: Oracle Database, SQL Server.
+ 
+3. Indica qué motores de bases de datos utilizan el lenguaje SQL (Structured Query Language) y señala cuáles de ellos ofrecen el modo transaccional SQL.
+4. Motores que utilizan SQL y soporte transaccional:
+Motor de base de datosUsa SQLModo transaccional (ACID)InnoDBSíSíPostgreSQLSíSíOracle DatabaseSíSíSQL ServerSíSíMariaDBSíSí 
+5. Señala qué motores de bases de datos permiten la interacción mediante comandos ejecutados en una terminal. Indica si estos motores de bases de datos funcionan de manera local o remota.
+Motor de base de datos¿Permiten terminal?Local/remotoInnoDBSíAmbosPostgreSQLSíAmbosOracle DatabaseSíAmbosSQL ServerSíAmbosMariaDBSíAmbos 
+6. Averigua si los motores de bases de datos tienen un usuario por defecto y si permiten crear otros tipos de usuarios con distintos niveles de permisos.
+Motor de base de datosUsuario por defectoPermite crear usuarios y rolesInnoDB_rootSíPostgreSQLpostgresSíOracle DatabaserootSíSQL ServersqlserverSíMariaDBrootSí 
+7. Con base en la información recopilada, crea un cuadro comparativo en Word que incluya todas las características mencionadas anteriormente. Marca con "sí" o "no" los elementos que aplican a cada motor de bases de datos. Los estudiantes trabajarán individualmente investigando diferentes motores y, posteriormente, consolidarán sus hallazgos en un cuadro final con los aportes de todos los compañeros.
+Motor de base de datosSGBDCódigo abiertoUsa SQLModo transaccional SQL¿Permiten terminal?Local/remotoUsuario por defectoPermite crear usuariosCopias de seguridadInnoDBMySQLSíSíSíSíAmbos_rootSíSíPostgreSQLPostgreSQLSíSíSíSíAmbospostgresSíSíOracle DatabaseOracleNoSíSíSíAmbosrootSíSíSQL ServerMicrosoft SQLNoSíSíSíAmbossqlserverSíSíMariaDBMariaDBSíSíSíSíAmbosrootSíSí  
+1. Explica la importancia de un motor de base de datos para manipular una base de datos o su conjunto, y detalla qué papel desempeña el SGDB al interactuar con una base de datos.
+El motor de base de datos es la parte del software que hace funcionar la base de datos. Es como el "corazón" que se encarga de guardar, buscar, cambiar y borrar los datos. Sin el motor, la base de datos no podría hacer nada. El SGBD es el programa completo que usa ese motor y además organiza todo lo que se hace con la base de datos. El SGBD ayuda a crear usuarios, dar permisos, hacer copias de seguridad y proteger los datos. Es como el "jefe" que organiza y cuida toda la información de la base de datos.
+ 
+1. Indica qué protocolos tiene disponible el sistema de gestión de bases de datos para conectarse con otras bases de datos, tanto de tipo local como de tipo remoto.
+Los SGBD usan protocolos de red que permiten conectarse a una base de datos desde la misma computadora (los cuales son locales) o desde otra computadora por Internet o red (los cuales son remotos).
+Algunos de estos protocolos son: TCP/IP el cual es el protocolo más común para conectar bases de datos por red, ODBC el cual permite que diferentes programas se conecten a las bases de datos y JDBC que se usa cuando las aplicaciones están hechas en Java y necesitan conectarse a la base de datos. Los tres son local y remoto. 
+ 
+1. Investiga si estos motores de bases de datos cuentan con protocolos de copias de seguridad o respaldo.
+Sí, casi todos los motores de bases de datos modernos tienen herramientas para hacer copias de seguridad. Estas copias son muy importantes para proteger los datos y poder recuperarlos si pasa algo malo, como un fallo del sistema o pérdida de información.
+ 
+Nueva consulta SQL:
+
+Para mostrar en Northwind los primeros 5 productos registrados
+SELECT TOP 5 ProductName, UnitPrice, UnitsInStock
+FROM Products;
